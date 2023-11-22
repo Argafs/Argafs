@@ -1,16 +1,19 @@
-### Hi there 👋
+#buat daftar angka
+daftar_angka = [222, 333, 666, 999]
 
-<!--
-**Argafs/Argafs** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+#cetak daftar_angka
+print("Daftar empat dari tiga digit angka:")
+for angka in daftar_angka:
+    print(angka)
 
-Here are some ideas to get you started:
+#input tiga nomor digit
+input_user = input("Masukkan tiga nomor digit, pisahkan dengan spasi: ")
+nomor_pengguna = [int(n) for n in input_user.split()]
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+#mengecek nomor ada di daftar atau tidak
+for nomor in nomor_pengguna:
+    if nomor in daftar_angka:
+        posisi = daftar_angka.index(nomor) + 1
+        print(f"Nomor {nomor} ditemukan pada posisi {posisi} dalam daftar.")
+    else:
+        print(f"Nomor {nomor} tidak ada dalam daftar.")
